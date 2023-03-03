@@ -1,0 +1,32 @@
+# ---------------------------------------------------------------------------
+# 定义排序节点的组织的网络拓扑结构
+# ---------------------------------------------------------------------------
+OrdererOrgs:
+  - Name: Orderer
+    Domain: example.com
+    EnableNodeOUs: true
+    Specs:
+      - Hostname: orderer0
+      - Hostname: orderer1
+      - Hostname: orderer2
+# ---------------------------------------------------------------------------
+# 定义peer节点的组织的网络拓扑结构
+# Template:Count: 2 表示该组织下有2个peer节点
+# ---------------------------------------------------------------------------
+PeerOrgs:
+  - Name: Org1
+    Domain: org1.example.com
+    EnableNodeOUs: true
+
+    Template:
+      Count: 2
+    Users:
+      Count: 1
+
+  - Name: Org2
+    Domain: org2.example.com
+    EnableNodeOUs: true
+    Template:
+      Count: 2
+    Users:
+      Count: 1

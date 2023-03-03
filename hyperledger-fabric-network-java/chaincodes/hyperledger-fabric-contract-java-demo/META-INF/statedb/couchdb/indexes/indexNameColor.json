@@ -1,0 +1,11 @@
+{
+  "index": {
+    "fields": [
+      "courseName",
+      "courseKey"
+    ]
+  },
+  "ddoc": "indexNameKeyDoc",
+  "name": "indexNameKey",
+  "type": "json"
+}
